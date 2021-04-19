@@ -70,7 +70,7 @@ class Game extends React.Component {
 	}
 	
 	createWebSocket(){	
-		this.socket = new WebSocket("ws://"+window.location.host, 'echo-protocol');
+		this.socket = new WebSocket("wss://"+window.location.host, 'echo-protocol');
 		this.socket.onerror = this.socketOnError;
 		this.socket.onclose = this.socketOnClose;		
 		this.socket.onmessage = this.socketOnMessage;
